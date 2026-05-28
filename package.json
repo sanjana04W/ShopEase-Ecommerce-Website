@@ -1,0 +1,17 @@
+{
+  "name": "shopease-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "ecommerce-admin",
+    "ecommerce-website"
+  ],
+  "scripts": {
+    "dev:admin": "npm run dev --workspace=ecommerce-admin",
+    "dev:website": "npm run dev --workspace=ecommerce-website",
+    "dev": "concurrently \"npm run dev:admin\" \"npm run dev:website\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
